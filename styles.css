@@ -26,47 +26,63 @@ body {
   width: auto;
 }
 
+/* CSS Custom Properties for Seamless Fluid Scaling */
+:root {
+  --hero-height: clamp(153px, 20vw, 358px);
+  --hero-margin-bottom: clamp(48px, 8vw, 93px);
+}
+
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 0 24px 64px;
+  padding: 0 clamp(24px, 5vw, 165px) 64px;
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-images {
   position: relative;
-  height: 153px;
-  margin-bottom: 48px;
+  height: var(--hero-height);
+  margin-bottom: var(--hero-margin-bottom);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-image {
+.hero-picture,
+.hero-picture-right {
   position: absolute;
-  height: 153px;
+  height: 100%;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-picture {
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.hero-picture img {
+  height: var(--hero-height);
   width: auto;
   object-fit: cover;
+  border-radius: 0;
+  transition: all 0.3s ease;
 }
 
-.hero-left {
-  left: -28px;
-  top: 0;
-  display: none;
+.hero-picture-right {
+  right: -50px;
+  opacity: 0;
+  transform: translateX(30px);
 }
 
-.hero-center {
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  z-index: 1;
-  display: block;
-}
-
-.hero-right {
-  right: -28px;
-  top: 0;
-  display: none;
+.hero-picture-right img {
+  height: var(--hero-height);
+  width: auto;
+  object-fit: cover;
 }
 
 .hero-content {
@@ -276,34 +292,6 @@ body {
 
 /* Tablet Styles */
 @media (min-width: 768px) {
-  .hero {
-    padding: 0 40px 64px;
-  }
-  
-  .hero-images {
-    height: 303px;
-    margin-bottom: 72px;
-  }
-  
-  .hero-image {
-    height: 303px;
-  }
-  
-  .hero-left {
-    left: -38px;
-    display: none;
-  }
-  
-  .hero-center {
-    left: 50%;
-    transform: translateX(-50%);
-    display: block;
-  }
-  
-  .hero-right {
-    right: -38px;
-    display: none;
-  }
   
   .hero-title {
     font-size: 48px;
@@ -343,9 +331,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 64px 165px;
     position: relative;
     min-height: 400px;
+    padding: 0 5%;
   }
   
   .hero-images {
@@ -353,36 +341,32 @@ body {
     top: 50%;
     left: 0;
     right: 0;
-    height: 358px;
     transform: translateY(-50%);
-    margin-bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
-  .hero-image {
-    height: 358px;
-    position: absolute;
+  .hero-picture {
+    flex-shrink: 0;
+    position: static;
+    transform: none;
+    z-index: 1;
   }
   
-  .hero-left {
-    left: -32px;
-    top: 0;
-    display: block;
-  }
-  
-  .hero-center {
-    display: none;
-  }
-  
-  .hero-right {
-    right: -32px;
-    top: 0;
-    display: block;
+  .hero-picture-right {
+    flex-shrink: 0;
+    position: static;
+    opacity: 1;
+    transform: none;
+    z-index: 1;
   }
   
   .hero-content {
     max-width: 540px;
     position: relative;
-    z-index: 2;
+    z-index: 3;
     margin: 0 auto;
   }
   

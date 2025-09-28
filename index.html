@@ -21,9 +21,15 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-images">
-        <img src="./assets/image-hero-left.png" alt="Group of people in video call" class="hero-image hero-left">
-        <img src="./assets/image-hero.png" alt="Group of people in video call" class="hero-image hero-center">
-        <img src="./assets/image-hero-right.png" alt="Group of people in video call" class="hero-image hero-right">
+        <picture class="hero-picture">
+          <source media="(min-width: 1200px)" srcset="./assets/image-hero-left.png" class="hero-image-left">
+          <source media="(min-width: 768px)" srcset="./assets/image-hero.png" class="hero-image-tablet">
+          <img src="./assets/image-hero.png" alt="Group of people in video call" class="hero-image-mobile">
+        </picture>
+        <picture class="hero-picture-right">
+          <source media="(min-width: 900px)" srcset="./assets/image-hero-right.png">
+          <img src="./assets/image-hero-right.png" alt="Group of people in video call" class="hero-image-right">
+        </picture>
       </div>
       
       <div class="hero-content">
