@@ -52,6 +52,7 @@ body {
 .hero-left {
   left: -28px;
   top: 0;
+  display: none;
 }
 
 .hero-center {
@@ -59,11 +60,13 @@ body {
   top: 0;
   transform: translateX(-50%);
   z-index: 1;
+  display: block;
 }
 
 .hero-right {
   right: -28px;
   top: 0;
+  display: none;
 }
 
 .hero-content {
@@ -288,15 +291,18 @@ body {
   
   .hero-left {
     left: -38px;
+    display: none;
   }
   
   .hero-center {
     left: 50%;
     transform: translateX(-50%);
+    display: block;
   }
   
   .hero-right {
     right: -38px;
+    display: none;
   }
   
   .hero-title {
@@ -360,6 +366,7 @@ body {
   .hero-left {
     left: -32px;
     top: 0;
+    display: block;
   }
   
   .hero-center {
@@ -369,6 +376,7 @@ body {
   .hero-right {
     right: -32px;
     top: 0;
+    display: block;
   }
   
   .hero-content {
