@@ -1,0 +1,409 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  color: #87879D;
+  background-color: #FAFAFA;
+  overflow-x: hidden;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 48px 0 54px;
+}
+
+.logo {
+  height: 28px;
+  width: auto;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 0 24px 64px;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-images {
+  position: relative;
+  height: 153px;
+  margin-bottom: 48px;
+}
+
+.hero-image {
+  position: absolute;
+  height: 153px;
+  width: auto;
+  object-fit: cover;
+}
+
+.hero-left {
+  left: -28px;
+  top: 0;
+}
+
+.hero-right {
+  right: -28px;
+  top: 0;
+}
+
+.hero-content {
+  max-width: 457px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 44px;
+  color: #28283D;
+  margin-bottom: 24px;
+}
+
+.hero-description {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 32px;
+  color: #87879D;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  border-radius: 29px;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 16px 40px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #4D96A9;
+  color: white;
+  position: relative;
+}
+
+.btn-primary:hover {
+  background-color: #71C0D4;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background-color: #8FE3F9;
+  border-radius: 50%;
+}
+
+.btn-secondary {
+  background-color: #855FB1;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #B18BDD;
+}
+
+/* Section Numbers */
+.section-number {
+  text-align: center;
+  margin: 64px 0;
+  position: relative;
+}
+
+.section-number::before {
+  content: '';
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 84px;
+  background-color: #87879D;
+  opacity: 0.25;
+}
+
+.number {
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  border: 1px solid #87879D;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  color: #87879D;
+  background-color: #FAFAFA;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* Features Section */
+.features {
+  text-align: center;
+  padding: 0 24px 72px;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.features-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-bottom: 64px;
+  max-width: 327px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 64px;
+}
+
+.features-images img {
+  width: 100%;
+  height: 143px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.features-content {
+  max-width: 573px;
+  margin: 0 auto;
+}
+
+.features-subtitle {
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 26px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #4D96A9;
+  margin-bottom: 16px;
+}
+
+.features-title {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 36px;
+  color: #28283D;
+  margin-bottom: 32px;
+}
+
+.features-description {
+  font-size: 16px;
+  line-height: 26px;
+  color: #87879D;
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  background-image: url('./assets/image-footer.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 92px 24px;
+  text-align: center;
+  color: white;
+}
+
+.footer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #4D96A9;
+  opacity: 0.9;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 1;
+  max-width: 457px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 36px;
+  margin-bottom: 24px;
+}
+
+.footer-description {
+  font-size: 16px;
+  line-height: 26px;
+  margin-bottom: 32px;
+  color: white;
+}
+
+.footer-btn {
+  background-color: #855FB1;
+}
+
+.footer-btn:hover {
+  background-color: #B18BDD;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .hero {
+    padding: 0 40px 64px;
+  }
+  
+  .hero-images {
+    height: 303px;
+    margin-bottom: 72px;
+  }
+  
+  .hero-image {
+    height: 303px;
+  }
+  
+  .hero-left {
+    left: -38px;
+  }
+  
+  .hero-right {
+    right: -38px;
+  }
+  
+  .hero-title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+  
+  .features {
+    padding: 0 40px 72px;
+  }
+  
+  .features-images {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 11px;
+    max-width: 689px;
+  }
+  
+  .features-images img {
+    height: 156px;
+  }
+  
+  .footer {
+    padding: 92px 40px;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1200px) {
+  .hero {
+    padding: 0 165px 64px;
+  }
+  
+  .hero-images {
+    height: 358px;
+    margin-bottom: 93px;
+  }
+  
+  .hero-image {
+    height: 358px;
+  }
+  
+  .hero-left {
+    left: -32px;
+  }
+  
+  .hero-right {
+    right: -32px;
+  }
+  
+  .hero-title {
+    font-size: 64px;
+    line-height: 64px;
+  }
+  
+  .hero-content {
+    max-width: 540px;
+  }
+  
+  .features {
+    padding: 0 165px 72px;
+  }
+  
+  .features-images {
+    gap: 30px;
+    max-width: 1110px;
+  }
+  
+  .features-images img {
+    height: 242px;
+  }
+  
+  .footer {
+    padding: 116px 165px;
+  }
+  
+  .footer-content {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    max-width: 1110px;
+    gap: 125px;
+  }
+  
+  .footer-text {
+    flex: 1;
+  }
+  
+  .footer-title {
+    font-size: 40px;
+    line-height: 44px;
+    margin-bottom: 24px;
+  }
+  
+  .footer-description {
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 0;
+  }
+}
+
+/* High Resolution Displays */
+@media (min-width: 1440px) {
+  .hero-left {
+    left: -28px;
+  }
+  
+  .hero-right {
+    right: -28px;
+  }
+}
