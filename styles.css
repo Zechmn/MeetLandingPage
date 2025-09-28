@@ -40,7 +40,7 @@ body {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .hero-images {
@@ -56,7 +56,7 @@ body {
 .hero-picture-right {
   position: absolute;
   height: 100%;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .hero-picture {
@@ -70,7 +70,7 @@ body {
   width: auto;
   object-fit: cover;
   border-radius: 0;
-  transition: all 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease;
 }
 
 .hero-picture-right {
@@ -206,9 +206,9 @@ body {
 
 .features-images img {
   width: 100%;
-  height: 143px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 16px;
+  border-radius: 50%;
 }
 
 .features-content {
@@ -316,8 +316,8 @@ body {
   }
   
   .features-images img {
-    height: 156px;
-    border-radius: 16px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
   }
   
   .footer {
@@ -396,8 +396,8 @@ body {
   }
   
   .features-images img {
-    height: 242px;
-    border-radius: 16px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
   }
   
   .footer {
